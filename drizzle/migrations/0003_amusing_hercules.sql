@@ -1,0 +1,1 @@
+ALTER TABLE "mail_messages" ADD COLUMN "read_at" text;

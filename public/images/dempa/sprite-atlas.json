@@ -1,0 +1,105 @@
+{
+  "source": {
+    "file": "sprites.png",
+    "width": 308,
+    "height": 489,
+    "format": "PNG RGBA"
+  },
+  "coordinateSystem": "Origin at top-left; rectangles are [x,y,width,height].",
+  "confirmedCrops": {
+    "walkCycle": {
+      "file": "sprites/walk-strip.png",
+      "frameSize": [
+        44,
+        44
+      ],
+      "frames": [
+        {
+          "id": "walk-1",
+          "rect": [
+            6,
+            8,
+            44,
+            44
+          ]
+        },
+        {
+          "id": "walk-2",
+          "rect": [
+            58,
+            8,
+            44,
+            44
+          ]
+        },
+        {
+          "id": "walk-3",
+          "rect": [
+            110,
+            8,
+            44,
+            44
+          ]
+        }
+      ]
+    },
+    "portraits": [
+      {
+        "id": "portrait-1",
+        "file": "portrait-1.png",
+        "rect": [
+          82,
+          436,
+          40,
+          48
+        ],
+        "status": "crop from visible portrait tile; expression/identity not yet verified"
+      },
+      {
+        "id": "portrait-2",
+        "file": "portrait-2.png",
+        "rect": [
+          126,
+          436,
+          40,
+          48
+        ],
+        "status": "crop from visible portrait tile; expression/identity not yet verified"
+      },
+      {
+        "id": "portrait-3",
+        "file": "portrait-3.png",
+        "rect": [
+          170,
+          436,
+          40,
+          48
+        ],
+        "status": "crop from visible portrait tile; expression/identity not yet verified"
+      },
+      {
+        "id": "portrait-4",
+        "file": "portrait-4.png",
+        "rect": [
+          214,
+          436,
+          40,
+          48
+        ],
+        "status": "crop from visible portrait tile; expression/identity not yet verified"
+      },
+      {
+        "id": "portrait-5",
+        "file": "portrait-5.png",
+        "rect": [
+          258,
+          436,
+          40,
+          48
+        ],
+        "status": "crop from visible portrait tile; expression/identity not yet verified"
+      }
+    ]
+  },
+  "notYetMapped": "Other body poses and vertical energy streaks overlap visually and cannot safely be separated by a uniform grid. Their frame boundaries and intended animation order require source-game/reference verification."
+}
