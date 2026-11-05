@@ -11,12 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Ver qué ZIP hay
+        run: find . -name "*.zip" -not -path "./.git/*" -exec ls -lh {} +
+
       - name: Descomprimir
+        shell: bash
         run: |
-          for f in $(find . -name "*.zip" -not -path "./.git/*"); do
+          set -euo pipefail
+          total=0
+          while IFS= read -r -d '' f; do
+            echo "Descomprimiendo: $f"
             unzip -o "$f" -d "$(dirname "$f")"
-            rm -f "$f"
-          done
+            rm -f -- "$f"
+            total=$((total+1))
+          done < <(find . -name "*.zip" -not -path "./.git/*" -print0)
+          echo "ZIP procesados: $total"
+
       - name: Confirmar cambios
         run: |
           git config user.name "github-actions[bot]"
